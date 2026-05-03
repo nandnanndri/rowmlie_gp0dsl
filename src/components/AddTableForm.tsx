@@ -103,9 +103,6 @@ export function AddTableForm({ onAddTable }: TableFormProps) {
       </div>
 
       <div>
-        <label className="block text-sm font-bold text-gray-700 mb-1">
-          Állapot ({status}/10)
-        </label>
         <input
           type="checkbox"
           checked={isLocked}

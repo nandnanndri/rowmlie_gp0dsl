@@ -7,12 +7,7 @@ interface TableDetailsProps {
   onToggleLock: (id: number, isLocked: boolean) => void;
 }
 
-export function TableDetails({
-  table,
-  onDelete,
-  onUpdateStatus,
-  onToggleLock,
-}: TableDetailsProps) {
+export function TableDetails({ table, onDelete }: TableDetailsProps) {
   const displayName =
     table.name ||
     (table.type === "foosball"
@@ -89,7 +84,6 @@ export function TableDetails({
           min="1"
           max="10"
           value={table.status}
-          onChange={(e) => onUpdateStatus(table.id, Number(e.target.value))}
           className="w-full accent-gray-800 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
         />
         <div className="flex justify-between text-xs text-gray-400 mt-2">
@@ -103,7 +97,6 @@ export function TableDetails({
           type="checkbox"
           id="isLockedCheckbox"
           checked={table["is-locked"]}
-          onChange={(e) => onToggleLock(table.id, e.target.checked)}
           className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
         />
         <label
