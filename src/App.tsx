@@ -137,8 +137,8 @@ function App() {
               onSelectTable={handleTableSelect}
               onMoveTable={handleMoveTable}
               onToggleLock={handleToggleLock}
-              width={roomWidth} // <-- ÚJ!
-              height={roomHeight} // <-- ÚJ!
+              width={roomWidth}
+              height={roomHeight}
             />
           </div>
 
